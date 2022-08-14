@@ -1,13 +1,13 @@
 class MyCircularQueue:
     def __init__(self, size: int):
-       
+        # Write code here
         self.size=size
         self.queue=[None]*size
         self.rear=-1
         self.front=-1
         
     def enqueue(self, value: int) -> bool:
-    
+        # Write code here
         if(self.is_full()==False):
             if(self.front==-1):
                 self.front=0
@@ -21,7 +21,7 @@ class MyCircularQueue:
             return False
 
     def dequeue(self) -> bool:
-       
+        # Write code here
         if(self.is_empty()==False):
             if(self.front==self.rear):
                 self.front=-1
@@ -34,7 +34,7 @@ class MyCircularQueue:
             return False
 
     def get_front(self) -> int:
-      
+        # Write code here
         if(self.is_empty()==False):
             return self.queue[self.front]
         else:
@@ -56,6 +56,7 @@ class MyCircularQueue:
         return (self.rear+1)%self.size==self.front
 
 
+# Do not change the following code
 operations = []
 for specific_operation in input().split(','):
     operations.append(specific_operation.strip())
